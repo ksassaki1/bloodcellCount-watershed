@@ -1,16 +1,15 @@
-# 🧬 **Projeto de Classificação de Células com Processamento de Imagem**
+# 🧬 **Projeto de Contagem de Células com Processamento de Imagem**
 
 Este projeto utiliza técnicas de **processamento de imagens** e **visão computacional** para realizar a **contagem e classificação de células** em imagens de microscópio. Os métodos aplicados envolvem detecção de bordas e transformadas para identificar e segmentar as células, permitindo avaliar o número de células presentes e suas características morfológicas.
 
 
 ## 🎯 **Objetivo**
 - Desenvolver uma rotina para **segmentar** células utilizando técnicas de detecção de bordas (`Canny`) e transformadas (`Hough`) para contar e classificar as células.
-- Avaliar o desempenho do método proposto em termos de **precisão** na detecção de células.
 
 ---
 
 ## 🛠 **Tecnologias e Ferramentas Usadas**
-- **Linguagem:** Python 3.10.15
+- **Linguagem:** Python
 - **Bibliotecas:**
   - `OpenCV`: Para processar as imagens e aplicar técnicas de detecção e segmentação.
   - `NumPy`: Para manipulação de arrays e operações matemáticas.
@@ -23,7 +22,7 @@ Este projeto utiliza técnicas de **processamento de imagens** e **visão comput
 - **`blood-cell-count-watershed`**: Notebook principal contendo:
   - **Carregamento e pré-processamento** das imagens de células.
   - **Segmentação** de células usando algoritmos de detecção de bordas e transformadas.
-  - **Visualização** dos resultados e análise do desempenho do método.
+  - **Visualização** dos resultados.
 
 ---
 
@@ -31,29 +30,24 @@ Este projeto utiliza técnicas de **processamento de imagens** e **visão comput
 - **Detecção de Bordas com Canny:**
   - A técnica de detecção de bordas de Canny é usada para identificar as bordas das células na imagem, permitindo destacar os contornos para posterior segmentação.
 
-- **Transformada de Hough para Detecção de Círculos:**
-  - A **Transformada de Hough** é aplicada para identificar células que apresentam formato circular. Essa técnica é muito eficaz na detecção de objetos com formas geométricas bem definidas.
+- **Watershed para Segmentação:**
+  - A técnica de **Watershed** é utilizada para segmentar as células a partir dos marcadores gerados, permitindo identificar áreas sobrepostas e realizar uma segmentação precisa.
 
 - **Operações Morfológicas:**
-  - **Dilatação** e **erosão** são aplicadas para remover ruídos e melhorar a segmentação das células, facilitando a detecção precisa.
+  - **Dilatação** e **erosão** são aplicadas para remover ruídos e melhorar a segmentação das células, facilitando a detecção precisa. Além disso, a operação de **fechamento (closing)** é utilizada para unir bordas quebradas em áreas de foreground, garantindo uma melhor definição das células segmentadas.
 
 ---
 
 ## 📊 **Resultados Encontrados**
-Durante os experimentos, as técnicas de detecção de bordas e transformada de Hough foram aplicadas a diversas imagens de células, permitindo identificar e contar o número total de células presentes. Aqui estão os principais resultados encontrados:
+Durante os experimentos, as técnicas de detecção de bordas e segmentação com Watershed foram aplicadas a diversas imagens de células, permitindo alguma segmentação de células presentes.
 
-- **Detecção de Bordas com Canny**:
-  - Identificou as bordas das células com boa precisão, destacando os contornos para posterior classificação.
 
-- **Transformada de Hough**:
-  - Foi eficaz na detecção de células circulares, obtendo uma **taxa de detecção de 85%** nas imagens analisadas.
-
-**Conclusão Geral**: As técnicas de processamento de imagem utilizadas foram capazes de identificar e segmentar células de forma eficaz, permitindo realizar a contagem e análise morfológica das mesmas.
+**Conclusão Geral**: As técnicas de processamento de imagem utilizadas foram capazes de identificar e segmentar células de forma promissora, permitindo realizar a contagem.
 
 ---
 
 ## 📊 **Exemplo da imagem segmentada**
-Abaixo está a imagem segmentada após a aplicação dos processos aplicados:
+Abaixo está a imagem segmentada após a aplicação dos processos:
 
 ### Imagem Segmentada com Watershed
 ![Imagem Segmentada com Watershed](img_watershed.png)
