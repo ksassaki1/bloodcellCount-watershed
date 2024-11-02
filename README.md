@@ -57,8 +57,6 @@ Abaixo está a imagem segmentada após a aplicação dos processos:
 ## 🚀 **Próximos Passos**
 - **Melhorar a Precisão** na Detecção:
   - Ajustar os parâmetros de Watershed e da detecção de bordas para obter uma segmentação ainda mais precisa.
-- **Aplicar Algoritmos de Machine Learning**:
-  - Implementar algoritmos de aprendizado não supervisionado para classificar as células com base em suas características morfológicas.
 - **Dashboard Interativo**:
   - Desenvolver um dashboard utilizando **Streamlit** para permitir ao usuário visualizar as células segmentadas e obter estatísticas de forma interativa.
 
