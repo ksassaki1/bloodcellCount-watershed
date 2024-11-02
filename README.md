@@ -19,7 +19,7 @@ Este projeto utiliza técnicas de **processamento de imagens** e **visão comput
 
 ## 📂 **Estrutura do Projeto**
 ### **Arquivos e Diretórios**
-- **`blood-cell-count-watershed`**: Notebook principal contendo:
+- **`blood_cell_count_watershed`**: Notebook principal contendo:
   - **Carregamento e pré-processamento** das imagens de células.
   - **Segmentação** de células usando algoritmos de detecção de bordas e transformadas.
   - **Visualização** dos resultados.
