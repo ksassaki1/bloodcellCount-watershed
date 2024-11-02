@@ -52,6 +52,8 @@ Abaixo está a imagem segmentada após a aplicação dos processos:
 ### Imagem Segmentada com Watershed
 ![Imagem Segmentada com Watershed](img_watershed.png)
 
+**Nota**: A imagem foi retirada do dataset disponível em [all_CELL_data](https://github.com/akshaylamba/all_CELL_data).
+
 ---
 
 ## 🚀 **Próximos Passos**
