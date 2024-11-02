@@ -1,10 +1,10 @@
 # 🧬 **Projeto de Contagem de Células com Processamento de Imagem**
 
-Este projeto utiliza técnicas de **processamento de imagens** e **visão computacional** para realizar a **contagem e classificação de células** em imagens de microscópio. Os métodos aplicados envolvem detecção de bordas e transformadas para identificar e segmentar as células, permitindo avaliar o número de células presentes.
-
+Este projeto utiliza técnicas de **processamento de imagens** e **visão computacional** para realizar a **contagem e segmentação de células** em imagens de microscópio. Os métodos aplicados envolvem suavização de imagens, limiarização, operações morfológicas e segmentação usando o algoritmo **Watershed** para identificar e segmentar as células, permitindo avaliar o número de células presentes.
 
 ## 🎯 **Objetivo**
-- Desenvolver uma rotina para **segmentar** células utilizando técnicas de detecção de bordas (`Canny`) e segmentação (`Watershed`).
+- Desenvolver uma rotina para **segmentar** células utilizando técnicas de **limiarização**, **operações morfológicas** e **segmentação (`Watershed`)**.
+- Aplicar o algoritmo **Watershed** para realizar a segmentação precisa de células em imagens de microscópio.
 
 ---
 
@@ -21,26 +21,26 @@ Este projeto utiliza técnicas de **processamento de imagens** e **visão comput
 ### **Arquivos e Diretórios**
 - **`blood_cell_count_watershed`**: Notebook principal contendo:
   - **Carregamento e pré-processamento** das imagens de células.
-  - **Segmentação** de células usando algoritmos de detecção de bordas e transformadas.
+  - **Limiarização e operações morfológicas** para remover ruídos.
+  - **Segmentação** de células usando o algoritmo `Watershed`.
   - **Visualização** dos resultados.
 
 ---
 
 ## 🧠 **Métodos Implementados**
-- **Detecção de Bordas com Canny:**
-  - A técnica de detecção de bordas de Canny é usada para identificar as bordas das células na imagem, permitindo destacar os contornos para posterior segmentação.
+- **Limiarização da Imagem**:
+  - A técnica de **limiarização de Otsu** é usada para transformar a imagem em uma versão binária, destacando áreas de foreground e background.
 
-- **Watershed para Segmentação:**
+- **Operações Morfológicas**:
+  - **Abertura (`Opening`)** é aplicada para remover pequenos ruídos e **fechamento (`Closing`)** é usado para unir bordas desconectadas. Além disso, a **dilatação** e **transformada de distância** são aplicadas para definir áreas certas de fundo e foreground, facilitando a segmentação precisa.
+
+- **Watershed para Segmentação**:
   - A técnica de **Watershed** é utilizada para segmentar as células a partir dos marcadores gerados, permitindo identificar áreas sobrepostas e realizar uma segmentação precisa.
-
-- **Operações Morfológicas:**
-  - **Dilatação** e **erosão** são aplicadas para remover ruídos e melhorar a segmentação das células, facilitando a detecção precisa. Além disso, a operação de **fechamento (closing)** é utilizada para unir bordas quebradas em áreas de foreground, garantindo uma melhor definição das células segmentadas.
 
 ---
 
 ## 📊 **Resultados Encontrados**
-Durante os experimentos, as técnicas de detecção de bordas e segmentação com Watershed foram aplicadas a diversas imagens de células, permitindo alguma segmentação de células presentes.
-
+Durante os experimentos, as técnicas de limiarização, operações morfológicas e segmentação com Watershed foram aplicadas a diversas imagens de células, permitindo segmentar as células presentes.
 
 **Conclusão Geral**: As técnicas de processamento de imagem utilizadas foram capazes de identificar e segmentar células de forma promissora, permitindo realizar a contagem.
 
@@ -58,9 +58,10 @@ Abaixo está a imagem segmentada após a aplicação dos processos:
 
 ## 🚀 **Próximos Passos**
 - **Melhorar a Precisão** na Detecção:
-  - Ajustar os parâmetros de Watershed e da detecção de bordas para obter uma segmentação ainda mais precisa.
+  - Ajustar os parâmetros de Watershed e as operações morfológicas para obter uma segmentação ainda mais precisa.
 - **Dashboard Interativo**:
   - Desenvolver um dashboard utilizando **Streamlit** para permitir ao usuário visualizar as células segmentadas e obter estatísticas de forma interativa.
+
 
 ---
 
