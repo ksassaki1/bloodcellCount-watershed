@@ -4,7 +4,7 @@ Este projeto utiliza técnicas de **processamento de imagens** e **visão comput
 
 
 ## 🎯 **Objetivo**
-- Desenvolver uma rotina para **segmentar** células utilizando técnicas de detecção de bordas (`Canny`) e transformadas (`Hough`) para contar e classificar as células.
+- Desenvolver uma rotina para **segmentar** células utilizando técnicas de detecção de bordas (`Canny`) e segmentação (`Watershed`).
 
 ---
 
