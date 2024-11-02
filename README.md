@@ -56,7 +56,7 @@ Abaixo está a imagem segmentada após a aplicação dos processos:
 
 ## 🚀 **Próximos Passos**
 - **Melhorar a Precisão** na Detecção:
-  - Ajustar os parâmetros da Transformada de Hough e da detecção de bordas para obter uma segmentação ainda mais precisa.
+  - Ajustar os parâmetros de Watershed e da detecção de bordas para obter uma segmentação ainda mais precisa.
 - **Aplicar Algoritmos de Machine Learning**:
   - Implementar algoritmos de aprendizado não supervisionado para classificar as células com base em suas características morfológicas.
 - **Dashboard Interativo**:
